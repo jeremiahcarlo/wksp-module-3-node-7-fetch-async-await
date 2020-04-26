@@ -23,6 +23,16 @@ newPauseFunction(1)
     .then(() => newPauseFunction(3))
     .then(() => newPauseFunction(3))
     .then(data => console.log(data));
+
+    const doIt = async() => {
+        await newPauseFunction(1);
+        await newPauseFunction(2);
+        await newPauseFunction(3);
+        await newPauseFunction(3);
+        console.log('no more "awaits"');
+    }
+
+doIt(); 
 ```
 
 _let's convert it to async/await_
@@ -44,6 +54,10 @@ transformText(string)
         return str;
     })
     .catch((err) => console.log(err));
+
+const Something = async(string) => {
+    let str = await
+} 
 ```
 
 ---
